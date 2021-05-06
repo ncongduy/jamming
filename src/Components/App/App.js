@@ -7,8 +7,19 @@ import { useState } from "react";
 
 function App(props) {
   const [searchResults, setSearchResults] = useState([
-    { name: "abc", artist: "abc", album: "123", id: 123 },
-    { name: "abc", artist: "abc", album: "123", id: 124 },
+    { name: "Minun ystävä", artist: "Nhi", album: "1", id: 1 },
+    { name: "Tình Nồng", artist: "Duy", album: "2", id: 2 },
+  ]);
+
+  const [playList, setPlayList] = useState([
+    {
+      name: "Nothing gonna change my love for you",
+      artist: "Duy - Nhi",
+      album: "3",
+      id: 3,
+    },
+    { name: "Thằng cuội", artist: "Chú bé", album: "4", id: 4 },
+    { name: "Rock", artist: "Roll", album: "5", id: 5 },
   ]);
 
   return (
@@ -20,7 +31,7 @@ function App(props) {
         <SearchBar />
         <div className="App-playlist">
           <SearchResults searchResults={searchResults} />
-          <Playlist />
+          <Playlist playList={playList} />
         </div>
       </div>
     </div>
