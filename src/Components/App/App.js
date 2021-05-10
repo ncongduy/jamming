@@ -22,6 +22,14 @@ function App(props) {
     { name: "Rock", artist: "Roll", album: "5", id: 5 },
   ]);
 
+  const addTrack = (track) => {
+    if (playList.find((trackPlayList) => trackPlayList.id === track.id)) {
+      return;
+    } else {
+      setPlayList((prev) => [track, ...prev]);
+    }
+  };
+
   return (
     <div>
       <h1>
@@ -30,8 +38,8 @@ function App(props) {
       <div className="App">
         <SearchBar />
         <div className="App-playlist">
-          <SearchResults searchResults={searchResults} />
-          <Playlist playList={playList} />
+          <SearchResults searchResults={searchResults} onAdd={addTrack} />
+          <Playlist playList={playList} onAdd={addTrack} />
         </div>
       </div>
     </div>

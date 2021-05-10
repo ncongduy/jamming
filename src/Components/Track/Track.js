@@ -2,11 +2,15 @@ import React from "react";
 import "./Track.css";
 
 function Track(props) {
-  const renderAction = (isRemoval) => {
-    if (isRemoval) {
+  const addTrack = () => {
+    props.onAdd(props.track);
+  };
+
+  const renderAction = () => {
+    if (props.isRemoval) {
       return <button>-</button>;
     } else {
-      return <button>+</button>;
+      return <button onClick={addTrack}>+</button>;
     }
   };
 
