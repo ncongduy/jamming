@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
-import { useState } from "react";
 
 function App(props) {
   const [searchResults, setSearchResults] = useState([
@@ -43,9 +42,13 @@ function App(props) {
   };
 
   const savePlaylist = () => {
-    const trackURIs = playList.map(track => track.uri);
+    const trackURIs = playList.map((track) => track.uri);
     setPlayList([]);
     setName("New Playlist");
+  };
+
+  const search = (term) => {
+    console.log(term);
   };
 
   return (
@@ -54,7 +57,7 @@ function App(props) {
         Ja<span className="highlight">mmm</span>ing
       </h1>
       <div className="App">
-        <SearchBar />
+        <SearchBar onSearch={search} />
         <div className="App-playlist">
           <SearchResults searchResults={searchResults} onAdd={addTrack} />
           <Playlist
