@@ -42,6 +42,12 @@ function App(props) {
     setName(name);
   };
 
+  const savePlaylist = () => {
+    const trackURIs = playList.map(track => track.uri);
+    setPlayList([]);
+    setName("New Playlist");
+  };
+
   return (
     <div>
       <h1>
@@ -56,6 +62,7 @@ function App(props) {
             onRemove={removeTrack}
             name={name}
             onNameChange={updatePlaylistName}
+            onSave={savePlaylist}
           />
         </div>
       </div>
