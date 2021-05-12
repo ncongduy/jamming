@@ -22,6 +22,8 @@ function App(props) {
     { name: "Rock", artist: "Roll", album: "5", id: 5 },
   ]);
 
+  const [name, setName] = useState("New Playlist");
+
   const addTrack = (track) => {
     if (playList.find((trackPlayList) => trackPlayList.id === track.id)) {
       return;
@@ -36,6 +38,10 @@ function App(props) {
     );
   };
 
+  const updatePlaylistName = (name) => {
+    setName(name);
+  };
+
   return (
     <div>
       <h1>
@@ -45,7 +51,12 @@ function App(props) {
         <SearchBar />
         <div className="App-playlist">
           <SearchResults searchResults={searchResults} onAdd={addTrack} />
-          <Playlist playList={playList} onRemove={removeTrack} />
+          <Playlist
+            playList={playList}
+            onRemove={removeTrack}
+            name={name}
+            onNameChange={updatePlaylistName}
+          />
         </div>
       </div>
     </div>
