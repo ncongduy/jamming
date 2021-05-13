@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jamming/static/css/main.e7855888.chunk.css",
+    "main.css": "/jamming/static/css/main.7f6bdee6.chunk.css",
     "main.js": "/jamming/static/js/main.600e5707.chunk.js",
     "main.js.map": "/jamming/static/js/main.600e5707.chunk.js.map",
     "runtime-main.js": "/jamming/static/js/runtime-main.385faf65.js",
@@ -10,14 +10,14 @@
     "static/js/3.a4b3d6e2.chunk.js": "/jamming/static/js/3.a4b3d6e2.chunk.js",
     "static/js/3.a4b3d6e2.chunk.js.map": "/jamming/static/js/3.a4b3d6e2.chunk.js.map",
     "index.html": "/jamming/index.html",
-    "static/css/main.e7855888.chunk.css.map": "/jamming/static/css/main.e7855888.chunk.css.map",
+    "static/css/main.7f6bdee6.chunk.css.map": "/jamming/static/css/main.7f6bdee6.chunk.css.map",
     "static/js/2.21d92f75.chunk.js.LICENSE.txt": "/jamming/static/js/2.21d92f75.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/jamming/static/media/background_photo_desktop.a0687f3f.jpg"
+    "static/media/App.css": "/jamming/static/media/background_ukulele.ea032886.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.385faf65.js",
     "static/js/2.21d92f75.chunk.js",
-    "static/css/main.e7855888.chunk.css",
+    "static/css/main.7f6bdee6.chunk.css",
     "static/js/main.600e5707.chunk.js"
   ]
 }
