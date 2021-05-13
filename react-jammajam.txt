@@ -1,0 +1,3 @@
+https://developer.spotify.com/dashboard/applications/fe3266c53cda4443b89281eb104c8dd4
+
+Client ID fe3266c53cda4443b89281eb104c8dd4

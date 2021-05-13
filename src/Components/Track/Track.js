@@ -27,7 +27,7 @@ function Track(props) {
         </p>
       </div>
 
-      <button className="Track-action">{renderAction()}</button>
+      <div className="Track-action">{renderAction()}</div>
     </div>
   );
 }

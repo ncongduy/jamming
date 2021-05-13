@@ -3,23 +3,12 @@ import "./App.css";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
+import Spotify from "../../util/Spotify";
 
 function App(props) {
-  const [searchResults, setSearchResults] = useState([
-    { name: "Minun ystävä", artist: "Nhi", album: "1", id: 1 },
-    { name: "Tình Nồng", artist: "Duy", album: "2", id: 2 },
-  ]);
+  const [searchResults, setSearchResults] = useState([]);
 
-  const [playList, setPlayList] = useState([
-    {
-      name: "Nothing gonna change my love for you",
-      artist: "Duy - Nhi",
-      album: "3",
-      id: 3,
-    },
-    { name: "Thằng cuội", artist: "Chú bé", album: "4", id: 4 },
-    { name: "Rock", artist: "Roll", album: "5", id: 5 },
-  ]);
+  const [playList, setPlayList] = useState([]);
 
   const [name, setName] = useState("New Playlist");
 
@@ -43,12 +32,14 @@ function App(props) {
 
   const savePlaylist = () => {
     const trackURIs = playList.map((track) => track.uri);
-    setPlayList([]);
-    setName("New Playlist");
+    Spotify.savePlaylist(name, trackURIs).then(() => {
+      setName("New Playlist");
+      setPlayList([]);
+    });
   };
 
   const search = (term) => {
-    console.log(term);
+    Spotify.search(term).then((response) => setSearchResults(response));
   };
 
   return (
